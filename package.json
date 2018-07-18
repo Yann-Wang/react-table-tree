@@ -1,7 +1,7 @@
 {
   "name": "react-table-tree",
   "version": "1.0.0",
-  "description": "This package is used to download file, like pdf, zip, image and so on. The important feature is that the callbacks can be used and the cors situation is supported.",
+  "description": "A react table component which supports render tree structure data.",
   "keywords": [
     "table tree",
     "table",
