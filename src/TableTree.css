@@ -1,0 +1,10 @@
+.layout {
+
+}
+
+.row {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 13px 10px 13px;
+  text-align: center;
+}
