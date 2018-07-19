@@ -135,20 +135,20 @@
 ### table props and columns props
 - table props
 
-  | table props | type           |
-  | ----------- | -------------- |
-  | columns     | array[object]  |
-  | datasets    | array[object]  |
-  | rootId      | number         |
-  | rowKey      | string         |
+  | table props | type           | required | default |
+  | ----------- | -------------- | -------- | ------- |
+  | columns     | array[object]  | true     |         |
+  | datasets    | array[object]  | true     |         |
+  | rootId      | number         | true     |         |
+  | rowKey      | string         | false    |  `'id'` |
 
 - column props
 
-  | column props | type   |
-  | ----------- | ------- |
-  | title       | string  |
-  | name        | string  |
-  | bodyRender  | node    |
+  | column props | type   | required | default    |
+  | ----------- | ------- | -------- | ---------- |
+  | title       | string  | true     |            |
+  | name        | string  | true     |            |
+  | bodyRender  | node    | false    | data[name] |
 
 
 ### Contributing
