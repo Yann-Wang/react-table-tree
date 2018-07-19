@@ -13,7 +13,6 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.min.js',
     library: 'react-table-tree',
-    libraryExport: 'react-table-tree',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

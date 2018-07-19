@@ -14,7 +14,6 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: 'react-table-tree',
-    libraryExport: 'react-table-tree',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
