@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 
 const common = require('./webpack.common.js')
@@ -14,16 +14,14 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: 'react-table-tree',
-    libraryExport: "react-table-tree",
+    libraryExport: 'react-table-tree',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
   plugins: [
+    new CleanWebpackPlugin('dist'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css'
     }),
     new CaseSensitivePathsPlugin()
   ]

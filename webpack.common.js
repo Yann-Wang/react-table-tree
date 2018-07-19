@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   module: {
@@ -8,14 +7,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
+          { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]_[local]_[hash:base64:5]',
               camelCase: true
             }
           },
@@ -28,9 +24,15 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: ['babel-loader'],
-        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/@youzan/region-select')]
+        include: [path.resolve(__dirname, 'src')]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src')
+    },
+    extensions: ['.js', '.jsx']
   },
   externals: [
     {
@@ -42,8 +44,5 @@ module.exports = {
       }
     }
   ],
-  plugins: [
-    new webpack.ProgressPlugin(),
-    new webpack.HashedModuleIdsPlugin()
-  ]
+  plugins: [new webpack.ProgressPlugin(), new webpack.HashedModuleIdsPlugin()]
 }
