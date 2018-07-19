@@ -134,6 +134,7 @@
 
 ### table props and columns props
 - table props
+
   | table props | type           |
   | ----------- | -------------- |
   | columns     | array[object]  |
@@ -141,6 +142,7 @@
   | rootId      | number         |
 
 - column props
+
   | column props | type   |
   | ----------- | ------- |
   | title       | string  |
