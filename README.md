@@ -140,6 +140,7 @@
   | columns     | array[object]  |
   | datasets    | array[object]  |
   | rootId      | number         |
+  | rowKey      | string         |
 
 - column props
 
