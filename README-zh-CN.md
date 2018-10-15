@@ -1,18 +1,17 @@
-English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/master/README-zh_CN.md)
-
 ### intro
-- A react table component which supports render tree structure data.
-- Powered by enable platform team of youzan company.
+- 一个支持渲染树状结构的table组件
+- 有赞赋能平台前端团队出品
 
 ### Demo
-- the table tree is just as follows.
+- 视觉效果图
   - ![table tree image](http://okup5z621.bkt.clouddn.com/table-tree-demo.jpeg)
 
-- to achieve the above effect, the code is as follows.
+- demo
 
   [![Edit p5nl6lvo5q](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/p5nl6lvo5q)
 
-### table props and columns props
+### table 属性
+
 - table props
 
 | table props | type           | required | default |
@@ -35,7 +34,7 @@ English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/mast
 
 - total props
 
-this property can be set the total row in the last row.
+该属性用于设置合计数据一行，`visible`控制是否显示，`name`用于自定义该行的名字。
 
 | total props | type    | required | default    |
 | ----------- | ------- | -------- | ---------- |
@@ -44,31 +43,32 @@ this property can be set the total row in the last row.
 
 - header props
 
-this property can be set table header fixed, the field of top is the distance to window top. When `fixed` is true, the feature is open.
+该属性用于设置表头固定的功能，`fixed`控制是否开启，`top`表示表头距窗口顶部的距离。
 
 | header props | type    | required | default    |
 | ------------ | ------- | -------- | ---------- |
 | fixed        | boolean | false    |  false     |
 | top          | number  | false    |  0         |
 
-### Contributing
-- start the project
+### 开发
+
+- 开始开发
 
 ```shell
   yarn webpack-dev
 ```
 
-- packaging for prod environment
+- 线上环境打包
 
 ```shell
   yarn webpack-prod
 ```
 
-### Support
+### 支持
 
 - react 16.3+
 
-### development Environment
+### 开发环境
 
 - yarn 1.9.4
 - node 8.11.2+

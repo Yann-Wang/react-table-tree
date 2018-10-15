@@ -6,7 +6,7 @@ import { dfs } from './utils'
 
 const setNodeLevel = (datasets, rootId, listMap) => {
   const init = datasets.filter(n => n.parentId === rootId).map(m => listMap[m.id])
-  const dfs = (rootNode, nodeMap) => {
+  const _dfs = (rootNode, nodeMap) => {
     const fn = (node, nodeLevel) => {
       node.__level = nodeLevel
       const sub = node.__sub
@@ -22,7 +22,7 @@ const setNodeLevel = (datasets, rootId, listMap) => {
     fn(rootNode, 1)
   }
 
-  init.forEach(n => dfs(n, listMap))
+  init.forEach(n => _dfs(n, listMap))
 }
 
 const initDatasetsTree = (datasets, rootId, datasetsMap) => {
@@ -85,7 +85,7 @@ class TableTreeWrapper extends React.Component {
 
   render() {
     const { datasets } = this.state
-    const { rootId, rowKey, columns, loading } = this.props
+    const { rootId, rowKey, columns, loading, total, header } = this.props
     const { formatedDatasets, datasetsMap } = this.memoizeInit(datasets, rootId)
     return (
       <TableTree
@@ -94,6 +94,9 @@ class TableTreeWrapper extends React.Component {
         datasetsMap={datasetsMap}
         rowKey={rowKey}
         loading={loading}
+        total={total}
+        rootId={rootId}
+        header={header}
       />
     )
   }
@@ -105,19 +108,36 @@ TableTreeWrapper.propTypes = {
       title: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       textAlign: PropTypes.oneOf(['left', 'center', 'right']),
+      width: PropTypes.number,
       bodyRender: PropTypes.func
     })
   ).isRequired,
   datasets: PropTypes.arrayOf(PropTypes.object.isRequired),
   rowKey: PropTypes.string,
   rootId: PropTypes.number.isRequired,
-  loading: PropTypes.bool
+  loading: PropTypes.oneOf([PropTypes.bool, PropTypes.element]),
+  total: PropTypes.shape({
+    visible: PropTypes.bool,
+    name: PropTypes.string
+  }),
+  header: PropTypes.shape({
+    fixed: PropTypes.bool,
+    top: PropTypes.number
+  })
 }
 
 TableTreeWrapper.defaultProps = {
   datasets: [],
   rowKey: 'id',
-  loading: false
+  loading: false,
+  total: {
+    visible: false,
+    name: '合计数据'
+  },
+  header: {
+    fixed: false,
+    top: 0
+  }
 }
 
 export default TableTreeWrapper

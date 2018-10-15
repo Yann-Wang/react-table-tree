@@ -29,7 +29,8 @@
   box-sizing: border-box;
   cursor: pointer;
   background: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #999;
+  border-radius: 2px;
   line-height: 10px;
   font-size: 0px;
   vertical-align: middle;
@@ -40,24 +41,22 @@
 }
 
 .plus:after{
-  box-sizing: border-box;
   display: inline-block;
   content: '+';
   width: 10px;
   height: 10px;
   text-align: center;
-  color: #bfbfbf;
-  font-size: 10px;
-  line-height: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 8px;
 }
 
 .minus:after{
-  box-sizing: border-box;
   display: inline-block;
   content: '-';
   width: 10px;
   text-align: center;
-  color: #bfbfbf;
-  font-size: 10px;
-  line-height: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 9px;
 }
