@@ -10,7 +10,7 @@ English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/mast
 
 - to achieve the above effect, the code is as follows.
 
-  [![Edit p5nl6lvo5q](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/p5nl6lvo5q)
+  [![Edit y2jzr46oz1](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y2jzr46oz1)
 
 ### table props and columns props
 - table props
