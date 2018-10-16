@@ -1,4 +1,4 @@
-English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/master/README-zh_CN.md)
+English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/master/README-zh-CN.md)
 
 ### intro
 - A react table component which supports render tree structure data.
