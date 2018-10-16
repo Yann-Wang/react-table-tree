@@ -4,7 +4,7 @@
 
 ### Demo
 - 视觉效果图
-  - ![table tree image](http://okup5z621.bkt.clouddn.com/react-table-tree-v2.jpeg)
+  - ![table tree image](http://okup5z621.bkt.clouddn.com/react-table-tree.jpeg)
 
 - demo
 
