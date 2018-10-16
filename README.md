@@ -24,6 +24,8 @@ English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/mast
 | loading     | element        | false    |         |
 | total       | object         | false    |         |
 | header      | object         | false    |         |
+| className   | string         | false    |    ''   |
+| style       | object         | false    |   {}    |
 
 - column props
 

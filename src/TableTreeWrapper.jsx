@@ -85,20 +85,10 @@ class TableTreeWrapper extends React.Component {
 
   render() {
     const { datasets } = this.state
-    const { rootId, rowKey, columns, loading, total, header } = this.props
+    const { rootId, rowKey, columns, loading, total, header, style, className } = this.props
+    const props = { rootId, rowKey, columns, loading, total, header, style, className }
     const { formatedDatasets, datasetsMap } = this.memoizeInit(datasets, rootId)
-    return (
-      <TableTree
-        columns={columns}
-        datasets={formatedDatasets}
-        datasetsMap={datasetsMap}
-        rowKey={rowKey}
-        loading={loading}
-        total={total}
-        rootId={rootId}
-        header={header}
-      />
-    )
+    return <TableTree {...props} datasets={formatedDatasets} datasetsMap={datasetsMap} />
   }
 }
 
@@ -123,7 +113,9 @@ TableTreeWrapper.propTypes = {
   header: PropTypes.shape({
     fixed: PropTypes.bool,
     top: PropTypes.number
-  })
+  }),
+  style: PropTypes.object,
+  className: PropTypes.string
 }
 
 TableTreeWrapper.defaultProps = {
@@ -137,7 +129,9 @@ TableTreeWrapper.defaultProps = {
   header: {
     fixed: false,
     top: 0
-  }
+  },
+  style: {},
+  className: ''
 }
 
 export default TableTreeWrapper

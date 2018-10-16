@@ -23,6 +23,8 @@
 | loading     | element        | false    |         |
 | total       | object         | false    |         |
 | header      | object         | false    |         |
+| className   | string         | false    |    ''   |
+| style       | object         | false    |   {}    |
 
 - column props
 

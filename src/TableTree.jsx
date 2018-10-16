@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import TableRow from './TableRow'
 import Header from './Header'
 import Footer from './Footer'
@@ -54,13 +55,15 @@ class TableTree extends React.Component {
   }
 
   render() {
-    const { columns, rowKey, loading: Loading, total, rootId, header } = this.props
+    const { columns, rowKey, loading: Loading, total, rootId, header, style, className } = this.props
     const { datasets, datasetsMap } = this.state
     const list = datasets.filter(item => item.__display).map(n => datasetsMap[n.id])
     const rootDataset = datasetsMap[rootId]
+    const klass = cx(styles.layout, className)
     return (
       <div
-        className={styles.layout}
+        className={klass}
+        style={style}
         ref={tableTree => {
           this.tableTree = tableTree
         }}
@@ -117,7 +120,9 @@ TableTree.propTypes = {
   header: PropTypes.shape({
     fixed: PropTypes.bool.isRequired,
     top: PropTypes.number.isRequired
-  }).isRequired
+  }).isRequired,
+  style: PropTypes.object.isRequired,
+  className: PropTypes.string.isRequired
 }
 
 TableTree.defaultProps = {

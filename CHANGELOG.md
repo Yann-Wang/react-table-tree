@@ -1,5 +1,6 @@
-## [v1.1.2]
+## [v1.2.0]
 > 2018.10.16
+- add className property and style property
 - update snapshot in README.md
 
 ## [v1.1.1]
