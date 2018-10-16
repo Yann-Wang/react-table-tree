@@ -1,3 +1,7 @@
+## [v1.1.2]
+> 2018.10.16
+- update snapshot in README.md
+
 ## [v1.1.1]
 > 2018.10.15
 - fix expand icon style error

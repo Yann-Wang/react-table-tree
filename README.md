@@ -6,7 +6,7 @@ English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/mast
 
 ### Demo
 - the table tree is just as follows.
-  - ![table tree image](http://okup5z621.bkt.clouddn.com/table-tree-demo.jpeg)
+  - ![table tree image](http://okup5z621.bkt.clouddn.com/react-table-tree-v2.jpeg)
 
 - to achieve the above effect, the code is as follows.
 
