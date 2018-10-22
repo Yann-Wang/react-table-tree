@@ -10,28 +10,29 @@
 
   [![Edit y2jzr46oz1](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y2jzr46oz1)
 
-### table 属性
+### table tree 属性
 
-- table props
+- table tree props
 
-| table props | type           | required | default |
-| ----------- | -------------- | -------- | ------- |
-| columns     | array[object]  | true     |         |
-| datasets    | array[object]  | true     |         |
-| rootId      | number         | true     |         |
-| rowKey      | string         | false    |  `'id'` |
-| loading     | element        | false    |         |
-| total       | object         | false    |         |
-| header      | object         | false    |         |
-| className   | string         | false    |    ''   |
-| style       | object         | false    |   {}    |
+| 属性         | 描述                              | 类型            | 默认值   |
+| ----------- | --------------------------------- | -------------- | ------- |
+| columns     | 表格列的配置描述如下                 | ColumnProps[]   |    []   |
+| datasets    | 树形结构数据，详细见下面datasets属性   | Tree<Leaf>     |    []   |
+| rootId      | 树形结构根节点id                    | number          |    0    |
+| rowKey      | 节点key的字段名                     | string          |  `'id'` |
+| loading     | loading状态                        | element        |         |
+| total       | 根节点的统计数据                     | object         |         |
+| header      | 表头相对视口顶部固定的功能，详见headerProps | object     |         |
+| className   | css类名                            | string         |    ''   |
+| style       | 内联样式属性                        | object          |   {}    |
 
 - column props
 
-| column props | type   | required | default    |
+| ColumnProps | type    | required | default    |
 | ----------- | ------- | -------- | ---------- |
 | title       | string  | true     |            |
 | name        | string  | true     |            |
+| width       | number  | false    |    null    |
 | bodyRender  | node    | false    | data[name] |
 
 - total props

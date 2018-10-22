@@ -1,10 +1,11 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
-  "extends": ["standard", "standard-react"],
+  "extends": ["standard", "standard-react", "plugin:jest/recommended"],
   "parser": "babel-eslint",
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "jest"],
   "rules": {
     "jsx-quotes": [2, "prefer-double"],
     "space-before-function-paren": [0],

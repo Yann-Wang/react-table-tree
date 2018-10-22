@@ -111,7 +111,7 @@ TableTree.propTypes = {
   ),
   datasetsMap: PropTypes.object.isRequired,
   rowKey: PropTypes.string.isRequired,
-  loading: PropTypes.oneOf([PropTypes.bool, PropTypes.element]).isRequired,
+  loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]).isRequired,
   rootId: PropTypes.number.isRequired,
   total: PropTypes.shape({
     visible: PropTypes.bool.isRequired,

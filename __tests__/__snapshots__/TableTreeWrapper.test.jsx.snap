@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableTreeWrapper renders correctly 1`] = `
+<TableTree
+  className=""
+  columns={Array []}
+  datasets={Array []}
+  datasetsMap={Object {}}
+  header={
+    Object {
+      "fixed": false,
+      "top": 0,
+    }
+  }
+  loading={false}
+  rootId={0}
+  rowKey="id"
+  style={Object {}}
+  total={
+    Object {
+      "name": "合计数据",
+      "visible": false,
+    }
+  }
+/>
+`;

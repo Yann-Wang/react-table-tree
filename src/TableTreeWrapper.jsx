@@ -101,11 +101,11 @@ TableTreeWrapper.propTypes = {
       width: PropTypes.number,
       bodyRender: PropTypes.func
     })
-  ).isRequired,
-  datasets: PropTypes.arrayOf(PropTypes.object.isRequired),
+  ),
+  datasets: PropTypes.arrayOf(PropTypes.object),
   rowKey: PropTypes.string,
-  rootId: PropTypes.number.isRequired,
-  loading: PropTypes.oneOf([PropTypes.bool, PropTypes.element]),
+  rootId: PropTypes.number,
+  loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
   total: PropTypes.shape({
     visible: PropTypes.bool,
     name: PropTypes.string
@@ -119,8 +119,10 @@ TableTreeWrapper.propTypes = {
 }
 
 TableTreeWrapper.defaultProps = {
+  columns: [],
   datasets: [],
   rowKey: 'id',
+  rootId: 0,
   loading: false,
   total: {
     visible: false,

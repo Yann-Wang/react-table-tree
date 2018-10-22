@@ -12,27 +12,28 @@ English | [简体中文](https://github.com/Yann-Wang/react-table-tree/blob/mast
 
   [![Edit y2jzr46oz1](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y2jzr46oz1)
 
-### table props and columns props
-- table props
+### table tree props and columns props
+- table tree props
 
-| table props | type           | required | default |
-| ----------- | -------------- | -------- | ------- |
-| columns     | array[object]  | true     |         |
-| datasets    | array[object]  | true     |         |
-| rootId      | number         | true     |         |
-| rowKey      | string         | false    |  `'id'` |
-| loading     | element        | false    |         |
-| total       | object         | false    |         |
-| header      | object         | false    |         |
-| className   | string         | false    |    ''   |
-| style       | object         | false    |   {}    |
+| table props | description                       | type           | default |
+| ----------- | --------------------------------- | -------------- | ------- |
+| columns     | columns of table                  | ColumnProps[]  |    []   |
+| datasets    | data record array to be displayed | array[object]  |    []   |
+| rootId      | the root id of table tree         | number         |    0    |
+| rowKey      | the row key field                 | string         |  `'id'` |
+| loading     | Loading status of table tree      | element        |         |
+| total       | the total data of table tree      | object         |         |
+| header      | the distance of header to be fixed to top | object |         |
+| className   | class name of table tree          | string         |    ''   |
+| style       | style property                    | object         |   {}    |
 
 - column props
 
-| column props | type   | required | default    |
+| ColumnProps | type   | required | default    |
 | ----------- | ------- | -------- | ---------- |
 | title       | string  | true     |            |
 | name        | string  | true     |            |
+| width       | number  | false    |    null    |
 | bodyRender  | node    | false    | data[name] |
 
 - total props
